@@ -1,0 +1,267 @@
+.container {
+  max-width: 420px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--lp-surface);
+  padding: 20px 20px 100px 20px;
+  position: relative;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background: var(--lp-surface-muted);
+  border-radius: var(--lp-radius-md);
+  padding: 10px 14px;
+  gap: 8px;
+}
+
+.searchBar svg {
+  flex-shrink: 0;
+  color: var(--lp-text-secondary);
+}
+
+.searchBar input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--lp-text-primary);
+}
+
+.searchBar input::placeholder {
+  color: var(--lp-text-secondary);
+}
+
+.searchBtn {
+  flex-shrink: 0;
+  background: var(--lp-primary);
+  color: var(--lp-primary-text);
+  border: none;
+  border-radius: var(--lp-radius-md);
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.searchBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.resultCount {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--lp-text-secondary);
+  margin: 14px 4px 16px 4px;
+}
+
+.resultsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background: var(--lp-surface-card);
+  border-radius: var(--lp-radius-xl);
+  padding: 16px;
+  border: 1px solid var(--lp-surface-border-subtle);
+  box-shadow: var(--lp-shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cardHeader {
+  display: flex;
+  gap: 14px;
+}
+
+.bookImg {
+  width: 80px;
+  height: 104px;
+  border-radius: var(--lp-radius-md);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.bookImg.placeholder {
+  background: var(--lp-surface-muted);
+}
+
+.details {
+  flex: 1;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 3px 0;
+  line-height: 1.25;
+}
+
+.author {
+  font-size: 12px;
+  color: var(--lp-text-secondary);
+  margin: 0 0 8px 0;
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: var(--lp-radius-full);
+  background: var(--lp-badge-bg);
+  color: var(--lp-badge-text);
+  font-weight: 500;
+}
+
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btnPrimary {
+  display: block;
+  width: 100%;
+  padding: 11px;
+  border-radius: var(--lp-radius-md);
+  border: none;
+  background: var(--lp-primary);
+  color: var(--lp-primary-text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  text-align: center;
+  text-decoration: none;
+}
+
+.btnSecondary {
+  display: block;
+  width: 100%;
+  padding: 11px;
+  border-radius: var(--lp-radius-md);
+  border: 1px solid var(--lp-surface-border);
+  background: var(--lp-surface-card);
+  color: var(--lp-text-primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fab {
+  position: fixed;
+  bottom: 84px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--lp-text-primary);
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: var(--lp-radius-full);
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: var(--lp-shadow-float);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.filterPanel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--lp-surface-card);
+  border-radius: var(--lp-radius-xl) var(--lp-radius-xl) 0 0;
+  padding: 20px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.12);
+  z-index: 20;
+}
+
+.filterPanelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--lp-text-primary);
+  margin-bottom: 14px;
+}
+
+.filterClose {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--lp-text-secondary);
+  padding: 0 4px;
+}
+
+.filterOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filterChip {
+  padding: 8px 16px;
+  border-radius: var(--lp-radius-full);
+  border: 1px solid var(--lp-surface-border);
+  background: var(--lp-surface-card);
+  color: var(--lp-text-primary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.filterChip.active {
+  background: var(--lp-primary);
+  color: var(--lp-primary-text);
+  border-color: var(--lp-primary);
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 40px 0;
+  justify-content: center;
+  color: var(--lp-text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--lp-surface-border);
+  border-top-color: var(--lp-primary);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.empty {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--lp-text-secondary);
+  font-size: 14px;
+}

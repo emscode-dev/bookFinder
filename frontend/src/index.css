@@ -1,0 +1,49 @@
+:root {
+  --lp-surface: #f8f9fa;
+  --lp-surface-muted: #e9ecef;
+  --lp-surface-card: #ffffff;
+  --lp-surface-border: #dee2e6;
+  --lp-surface-border-subtle: #f1f3f5;
+  --lp-text-primary: #212529;
+  --lp-text-secondary: #6c757d;
+  --lp-primary: #2563eb;
+  --lp-primary-text: #ffffff;
+  --lp-badge-bg: #e8f0fe;
+  --lp-badge-text: #1a56db;
+  --lp-radius-md: 10px;
+  --lp-radius-xl: 16px;
+  --lp-radius-full: 9999px;
+  --lp-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --lp-shadow-float: 0 4px 16px rgba(0, 0, 0, 0.15);
+
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --lp-surface: #121212;
+    --lp-surface-muted: #1e1e1e;
+    --lp-surface-card: #1a1a1a;
+    --lp-surface-border: #2a2a2a;
+    --lp-surface-border-subtle: #222222;
+    --lp-text-primary: #e4e4e7;
+    --lp-text-secondary: #9ca3af;
+    --lp-primary: #3b82f6;
+    --lp-primary-text: #ffffff;
+    --lp-badge-bg: #1e3a5f;
+    --lp-badge-text: #93c5fd;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--lp-surface);
+  color: var(--lp-text-primary);
+}
+
+* {
+  box-sizing: border-box;
+}
